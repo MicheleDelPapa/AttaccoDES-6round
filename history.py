@@ -20,3 +20,9 @@ runfile('C:/Users/Michele/.spyder-py3/AttaccoDES.py', wdir='C:/Users/Michele/.sp
 
 ## ---(Mon Oct  3 18:14:17 2022)---
 runfile('C:/Users/Michele/.spyder-py3/AttaccoDES.py', wdir='C:/Users/Michele/.spyder-py3')
+
+## ---(Thu Oct  6 15:07:46 2022)---
+runfile('C:/Users/Michele/.spyder-py3/AttaccoDES.py', wdir='C:/Users/Michele/.spyder-py3')
+
+## ---(Fri Oct  7 10:47:47 2022)---
+runfile('C:/Users/Michele/.spyder-py3/AttaccoDES.py', wdir='C:/Users/Michele/.spyder-py3')

@@ -716,7 +716,9 @@ def bytearray_to_hex(array):
 
 def encryption_decryption():
     difference = bytearray([0x40, 0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00])
-    plaintext, plaintext_ = PlaintextRandomGenerator().generate(difference)
+    #plaintext, plaintext_ = PlaintextRandomGenerator().generate(difference)
+    plaintext = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+    plaintext_ = bytearray([0x40, 0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00])
     key = KeyRandomGenerator().generate()
 
     print("difference  = " + bytearray_to_hex(difference))
@@ -757,7 +759,7 @@ def break_6_rounds():
     round_6_key = round_key(6, key)
     print("Valid key: " + str(cast_8_bit_to_6_bit(round_6_key)))
     difference = bytearray([0x40, 0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00])
-    subkeys = [0,1,2,3, 4, 5, 6, 7]  # which sboxes we attack
+    subkeys = [1, 4, 5, 6, 7]  # which sboxes we attack
     possible_keys = differential_attack_6_rounds(cipher, difference, attempts, subkeys)
     round_6_key_candidate = [key[0]["key"] if len(key) > 0 else -1 for key in possible_keys]
     print("Key candidate: " + str(round_6_key_candidate))
